@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32602.291
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Puma.Security.Rules", "Puma.Security.Rules\Puma.Security.Rules.csproj", "{B198B981-D039-43D2-8B84-2B4F1BC1A1BA}"
 EndProject
@@ -44,12 +44,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Puma.Security.Rules.Vsix.VS2017", "Puma.Security.Rules.Vsix.VS2017\Puma.Security.Rules.Vsix.VS2017.csproj", "{1F6DC66C-6317-44FC-A17A-3B09BF3A036B}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{0dde24a7-0987-414d-b95a-deb723a8d6e6}*SharedItemsImports = 5
-		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{31251bad-79d1-4f96-8320-308991e3d45c}*SharedItemsImports = 5
-		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{b198b981-d039-43d2-8b84-2b4f1bc1a1ba}*SharedItemsImports = 5
-		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{c0ce795e-8954-4401-9360-6f69d9493b6f}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
@@ -130,5 +124,11 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {307896BF-6834-4B26-849E-C6E14B7ED66C}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{0dde24a7-0987-414d-b95a-deb723a8d6e6}*SharedItemsImports = 5
+		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{31251bad-79d1-4f96-8320-308991e3d45c}*SharedItemsImports = 5
+		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{b198b981-d039-43d2-8b84-2b4f1bc1a1ba}*SharedItemsImports = 5
+		Puma.Security.Rules.Shared\Puma.Security.Rules.Shared.projitems*{c0ce795e-8954-4401-9360-6f69d9493b6f}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
