@@ -8,11 +8,11 @@
   
   <PropertyGroup>
     <PackageId>Puma.Security.Rules.2019</PackageId>
-    <PackageVersion>2.3.1.0</PackageVersion>
+    <PackageVersion>2.3.1.3</PackageVersion>
     <Authors>Puma Security LLC</Authors>
     <PackageLicenseUrl>https://github.com/pumasecurity/puma-scan/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/pumasecurity/puma-scan/wiki</PackageProjectUrl>
-    <PackageIconUrl>https://www.pumascan.com/img/logo.png</PackageIconUrl>
+    <!--<PackageIconUrl>https://www.pumascan.com/img/logo.png</PackageIconUrl>-->
     <RepositoryUrl>https://github.com/pumasecurity/puma-scan</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>Puma Scan Community Edition is a free software security analyzer providng real time, continuous source code analysis as development teams write and build code. Puma Scan hunts for vulnerabilities identified in the OWASP Top 10, SANS/CWE Top 25, and other common insecure coding patterns.</Description>
