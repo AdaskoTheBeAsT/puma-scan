@@ -31,7 +31,7 @@ namespace Puma.Security.Rules.Analyzer.Validation.Csrf.Core
         public bool IsVulnerable(SemanticModel model, MethodDeclarationSyntax syntax)
         {
             //Quick check - public methods only
-            if (!syntax.Modifiers.Any(i => i.Kind() == SyntaxKind.PublicKeyword))
+            if (!syntax.Modifiers.Any(i => i.IsKind(SyntaxKind.PublicKeyword)))
                 return false;
 
             //Verify the return type is an expected value.

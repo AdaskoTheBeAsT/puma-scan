@@ -44,7 +44,7 @@ namespace Puma.Security.Rules.Analyzer.AccessControl.Authorize.Core
                     continue;
 
                 //Quick check - public methods only
-                if (!methodSyntax.Modifiers.Any(i => i.Kind() == SyntaxKind.PublicKeyword))
+                if (!methodSyntax.Modifiers.Any(i => i.IsKind(SyntaxKind.PublicKeyword)))
                     continue;
 
                 //If does not have the correct return type
