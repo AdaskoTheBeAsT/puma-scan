@@ -26,8 +26,8 @@ namespace Puma.Security.Rules.Core
 
         public PumaCompilationAnalysisContext(DiagnosticId diagnosticId, CompilationAnalysisContext context)
         {
-            this.DiagnosticId = diagnosticId;
-            this.RosylnContext = context;
+            DiagnosticId = diagnosticId;
+            RosylnContext = context;
         }
     }
 }

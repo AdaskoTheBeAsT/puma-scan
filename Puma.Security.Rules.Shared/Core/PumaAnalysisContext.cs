@@ -22,7 +22,7 @@ namespace Puma.Security.Rules.Core
 
         internal PumaAnalysisContext(AnalysisContext context)
         {
-            this.Context = context;
+            Context = context;
         }
 
         internal void RegisterCompilationStartAction(Action<PumaCompilationStartAnalysisContext> registerPumaActions)

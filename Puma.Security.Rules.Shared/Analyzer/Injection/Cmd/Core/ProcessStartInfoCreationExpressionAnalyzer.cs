@@ -33,7 +33,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
         {
             //These persist from previous invocations (clear before staring)
             //TODO: Make this lock during execution until we call ToImmutableArray() after this is done
-            this.Sources.Clear();
+            Sources.Clear();
 
             //Cheap check for class & method name
             if (!ContainsTypeName(syntax)) return false;
@@ -59,7 +59,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                 if (!expressionAnalyzer.CanIgnore(model, fileNameSyntax)
                     && !expressionAnalyzer.CanSuppress(model, fileNameSyntax, ruleId))
                 {
-                    this.Sources.Add(fileNameSyntax);
+                    Sources.Add(fileNameSyntax);
                 }
 
                 //Arguments parameter checks
@@ -70,7 +70,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                     if (!expressionAnalyzer.CanIgnore(model, argumenetSyntax)
                         && !expressionAnalyzer.CanSuppress(model, argumenetSyntax, ruleId))
                     {
-                        this.Sources.Add(argumenetSyntax);
+                        Sources.Add(argumenetSyntax);
                     }
                 }
             }
@@ -86,7 +86,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                     var expressionAnalyzer = SyntaxNodeAnalyzerFactory.Create(filter.Right);
                     if (!expressionAnalyzer.CanIgnore(model, filter.Right) && !expressionAnalyzer.CanSuppress(model, filter.Right, ruleId))
                     {
-                        this.Sources.Add(filter.Right);
+                        Sources.Add(filter.Right);
                     }
                 }
 
@@ -98,12 +98,12 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                     var expressionAnalyzer = SyntaxNodeAnalyzerFactory.Create(filter.Right);
                     if (!expressionAnalyzer.CanIgnore(model, filter.Right) && !expressionAnalyzer.CanSuppress(model, filter.Right, ruleId))
                     {
-                        this.Sources.Add(filter.Right);
+                        Sources.Add(filter.Right);
                     }
                 }
             }
 
-            return this.Sources != null && this.Sources.Count > 0;
+            return Sources != null && Sources.Count > 0;
         }
 
         private static bool ContainsTypeName(ObjectCreationExpressionSyntax syntax)

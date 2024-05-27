@@ -25,19 +25,19 @@ namespace Puma.Security.Parser.Rules.Models
         public Rule(string id, string anchor, string title, string category, string message
             , string description, string recommendation, ReportSeverity riskRating, DiagnosticSeverity severity)
         {
-            this.Id = id;
-            this.Anchor = anchor;
-            this.Title = title;
-            this.Category = category;
-            this.Message = message;
-            this.Description = description;
-            this.Recommendation = recommendation;
-            this.DefaultRiskRating = riskRating;
-            this.Severity = severity;
+            Id = id;
+            Anchor = anchor;
+            Title = title;
+            Category = category;
+            Message = message;
+            Description = description;
+            Recommendation = recommendation;
+            DefaultRiskRating = riskRating;
+            Severity = severity;
 
             //New up lists
-            this.References = new List<string>();
-            this.CodeExamples = new List<Snippet>();
+            References = new List<string>();
+            CodeExamples = new List<Snippet>();
         }
 
         public string Id { get; set; }
@@ -96,7 +96,7 @@ namespace Puma.Security.Parser.Rules.Models
         /// <summary>
         /// Helper generating the online URL for help docs
         /// </summary>
-        public string Url => $"https://pumascan.com/rules/#{this.Anchor}";
+        public string Url => $"https://pumascan.com/rules/#{Anchor}";
 
         /// <summary>
         /// Error, Warning, Info bucket for this rule

@@ -32,7 +32,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
         {
             //These persist from previous invocations (clear before staring)
             //TODO: Make this lock during execution until we call ToImmutableArray() after this is done
-            this.Sources.Clear();
+            Sources.Clear();
 
             //Cheap check for class & method name
             if (!syntax.Expression.ToString().Contains("Process.Start")) return false;
@@ -65,7 +65,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                 if (!expressionAnalyzer.CanIgnore(model, fileNameSyntax)
                     && !expressionAnalyzer.CanSuppress(model, fileNameSyntax, ruleId))
                 {
-                    this.Sources.Add(fileNameSyntax);
+                    Sources.Add(fileNameSyntax);
                 }
 
             }
@@ -76,7 +76,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                 if (!expressionAnalyzer.CanIgnore(model, fileNameSyntax)
                     && !expressionAnalyzer.CanSuppress(model, fileNameSyntax, ruleId))
                 {
-                    this.Sources.Add(fileNameSyntax);
+                    Sources.Add(fileNameSyntax);
                 }
 
                 var argumenetSyntax = syntax.ArgumentList.Arguments[1].Expression;
@@ -84,7 +84,7 @@ namespace Puma.Security.Rules.Analyzer.Injection.Cmd.Core
                 if (!expressionAnalyzer.CanIgnore(model, argumenetSyntax)
                     && !expressionAnalyzer.CanSuppress(model, argumenetSyntax, ruleId))
                 {
-                    this.Sources.Add(argumenetSyntax);
+                    Sources.Add(argumenetSyntax);
                 }
             }
 

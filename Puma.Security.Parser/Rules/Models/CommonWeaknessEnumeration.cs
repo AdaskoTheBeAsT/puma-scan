@@ -16,8 +16,8 @@ namespace Puma.Security.Parser.Rules.Models
     {
         public CommonWeaknessEnumeration(string id, string name)
         {
-            this.Id = id;
-            this.Name = name;
+            Id = id;
+            Name = name;
         }
 
         public string Id { get; set; }
@@ -28,7 +28,7 @@ namespace Puma.Security.Parser.Rules.Models
 
         public CommonWeaknessEnumeration Clone()
         {
-            return new CommonWeaknessEnumeration(this.Id, this.Name);
+            return new CommonWeaknessEnumeration(Id, Name);
         }
     }
 }

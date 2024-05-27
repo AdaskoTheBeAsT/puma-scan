@@ -21,7 +21,7 @@ namespace Puma.Security.Rules //Root namespace to make globally available
 
         internal PumaApp()
         {
-            this.Id = Guid.NewGuid();
+            Id = Guid.NewGuid();
 
             _pumaApp = this;
         }

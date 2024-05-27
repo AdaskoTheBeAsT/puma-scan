@@ -25,7 +25,7 @@ namespace Puma.Security.Rules.Core
 
         internal PumaCompilationStartAnalysisContext(CompilationStartAnalysisContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
         internal void RegisterSyntaxNodeAction(Action<PumaSyntaxNodeAnalysisContext> registerSyntaxAction, SyntaxKind syntaxKind, DiagnosticId diagnosticId)

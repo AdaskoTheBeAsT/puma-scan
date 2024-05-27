@@ -26,6 +26,7 @@
     <Product>Puma Scan Community Edition</Product>
     <AssemblyName>Puma.Security.Rules</AssemblyName>
     <RootNamespace>Puma.Security.Rules</RootNamespace>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -48,6 +49,7 @@
     <None Include="$(OutputPath)\tools\parser\*.*" Pack="true" PackagePath="tools/parser" />
     <None Include="$(OutputPath)\..\..\..\..\packages\Microsoft.Web.Xdt.3.1.0\lib\netstandard2.0\Microsoft.Web.XmlTransform.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>

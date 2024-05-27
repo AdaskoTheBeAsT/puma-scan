@@ -59,6 +59,9 @@ namespace Puma.Security.Rules.Core
 
         public override void Initialize(AnalysisContext context)
         {
+            context.EnableConcurrentExecution();
+            context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.Analyze);
+
             try
             {
                 var pumaContext = new PumaAnalysisContext(context);

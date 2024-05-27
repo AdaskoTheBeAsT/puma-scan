@@ -24,12 +24,12 @@ namespace Puma.Security.Rules.Configuration.Core
         public CleanseMethod(TaintFlags flag, string syntax,
             string _namespace, string type, string method, List<DiagnosticId> ruleIds)
         {
-            this.Flag = flag;
-            this.Syntax = syntax;
-            this.Namespace = _namespace;
-            this.Type = type;
-            this.Method = method;
-            this.RuleIds = ruleIds;
+            Flag = flag;
+            Syntax = syntax;
+            Namespace = _namespace;
+            Type = type;
+            Method = method;
+            RuleIds = ruleIds;
         }
 
         /// <summary>

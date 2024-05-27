@@ -24,8 +24,8 @@ namespace Puma.Security.Rules.Core
 
         public PumaSyntaxNodeAnalysisContext(DiagnosticId diagnosticId, SyntaxNodeAnalysisContext context)
         {
-            this.DiagnosticId = diagnosticId;
-            this.RosylnContext = context;
+            DiagnosticId = diagnosticId;
+            RosylnContext = context;
         }
     }
 }

@@ -16,8 +16,8 @@ namespace Puma.Security.Parser.Rules.Models
     {
         public Snippet(string badge, string content)
         {
-            this.Badge = badge;
-            this.Content = content;
+            Badge = badge;
+            Content = content;
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace Puma.Security.Parser.Rules.Models
 
         public Snippet Clone()
         {
-            return new Snippet(this.Badge, this.Content);
+            return new Snippet(Badge, Content);
         }
     }
 }

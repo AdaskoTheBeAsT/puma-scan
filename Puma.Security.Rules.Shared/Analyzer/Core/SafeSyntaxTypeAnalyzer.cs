@@ -58,7 +58,7 @@ namespace Puma.Security.Rules.Analyzer.Core
             var propertySymbol = symbolInfo.Symbol as IPropertySymbol;
             if (propertySymbol != null)
             {
-                if (this.IsSafeSyntaxType(propertySymbol.Type))
+                if (IsSafeSyntaxType(propertySymbol.Type))
                     return true;
             }
             return false;
@@ -69,7 +69,7 @@ namespace Puma.Security.Rules.Analyzer.Core
             var parameterSymbol = symbolInfo.Symbol as IParameterSymbol;
             if (parameterSymbol != null)
             {
-                if (this.IsSafeSyntaxType(parameterSymbol.Type))
+                if (IsSafeSyntaxType(parameterSymbol.Type))
                     return true;
             }
             return false;
@@ -80,7 +80,7 @@ namespace Puma.Security.Rules.Analyzer.Core
             var fieldSymbol = symbolInfo.Symbol as IFieldSymbol;
             if (fieldSymbol != null)
             {
-                if (this.IsSafeSyntaxType(fieldSymbol.Type))
+                if (IsSafeSyntaxType(fieldSymbol.Type))
                     return true;
             }
             return false;
@@ -91,7 +91,7 @@ namespace Puma.Security.Rules.Analyzer.Core
             var localSymbol = symbolInfo.Symbol as ILocalSymbol;
             if (localSymbol != null)
             {
-                if (this.IsSafeSyntaxType(localSymbol.Type))
+                if (IsSafeSyntaxType(localSymbol.Type))
                     return true;
             }
             return false;
@@ -104,11 +104,11 @@ namespace Puma.Security.Rules.Analyzer.Core
             {
                 //TODO: DETERMINE IF WE NEED A SWTICH TO DRIVE RETURN TYPE ONLY VS RECEIVER TYPE ONLY INSTEAD OF RUNNING BOTH
                 //Check for return type strong syntax
-                if (this.IsSafeSyntaxType(methodSymbol.ReturnType))
+                if (IsSafeSyntaxType(methodSymbol.ReturnType))
                     return true;
 
                 //Check for return type receiver type
-                if (this.IsSafeSyntaxType(methodSymbol.ReceiverType))
+                if (IsSafeSyntaxType(methodSymbol.ReceiverType))
                     return true;
             }
             return false;
