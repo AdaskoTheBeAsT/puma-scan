@@ -8,7 +8,7 @@
   
   <PropertyGroup>
     <PackageId>AdaskoTheBeAsT.Puma.Security.Rules.2022</PackageId>
-    <PackageVersion>2.3.1.7</PackageVersion>
+    <PackageVersion>2.3.1.10</PackageVersion>
     <Authors>Puma Security LLC</Authors>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/pumasecurity/puma-scan/wiki</PackageProjectUrl>
@@ -30,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.9.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.10.0" />
     <PackageReference Include="Microsoft.Web.Xdt" Version="3.1.0" />
   </ItemGroup>
   
@@ -49,8 +49,8 @@
     <None Include="$(OutputPath)\tools\parser\*.*" Pack="true" PackagePath="tools/parser" />
     <None Include="$(OutputPath)\..\..\..\..\packages\Microsoft.Web.Xdt.3.1.0\lib\netstandard2.0\Microsoft.Web.XmlTransform.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
-    <None Include="..\README.md" Pack="true" PackagePath="\"/>
-    <None Include="..\LICENSE" Pack="true" PackagePath=""/>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
