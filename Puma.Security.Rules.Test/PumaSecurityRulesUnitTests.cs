@@ -1,85 +1,51 @@
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CodeFixes;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using Puma.Security.Rules.Suites;
 using TestHelper;
-using Puma.Security.Rules;
 
 namespace Puma.Security.Rules.Test
 {
     [TestClass]
-    public class UnitTest : CodeFixVerifier
+    public class UnitTest : DiagnosticVerifier
     {
-
-        //No diagnostics expected to show up
         [TestMethod]
-        public void TestMethod1()
+        public void EmptySourceDoesNotProduceDiagnostics()
         {
-            var test = @"";
-
-            VerifyCSharpDiagnostic(test);
+            VerifyCSharpDiagnostic(string.Empty);
         }
 
-        //Diagnostic and CodeFix both triggered and checked for
         [TestMethod]
-        public void TestMethod2()
+        public void SystemRandomProducesDiagnostic()
         {
             var test = @"
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Diagnostics;
+using System;
 
-    namespace ConsoleApplication1
+class Example
+{
+    void Generate()
     {
-        class TypeName
-        {   
-        }
-    }";
+        var random = new Random();
+    }
+}";
             var expected = new DiagnosticResult
             {
-                Id = "PumaSecurityRules",
-                Message = String.Format("Type name '{0}' contains lowercase letters", "TypeName"),
+                Id = "SEC0115",
+                Message = "System.Random does not provide cryptographically random numbers. Consider using the System.Security.Cryptography.RNGCryptoServiceProvider for random values used in a security context.",
                 Severity = DiagnosticSeverity.Warning,
                 Locations =
-                    new[] {
-                            new DiagnosticResultLocation("Test0.cs", 11, 15)
-                        }
+                    new[]
+                    {
+                        new DiagnosticResultLocation("Test0.cs", 8, 22)
+                    }
             };
 
             VerifyCSharpDiagnostic(test, expected);
-
-            var fixtest = @"
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Diagnostics;
-
-    namespace ConsoleApplication1
-    {
-        class TYPENAME
-        {   
         }
-    }";
-            VerifyCSharpFix(test, fixtest);
-        }
-
-        /*
-        protected override CodeFixProvider GetCSharpCodeFixProvider()
-        {
-            return new PumaSecurityRulesCodeFixProvider();
-        }
-        
 
         protected override DiagnosticAnalyzer GetCSharpDiagnosticAnalyzer()
         {
-            return new PumaSecurityRulesAnalyzer();
+            return new PumaDiagnosticSuite();
         }
-        */
     }
 }

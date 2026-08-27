@@ -8,7 +8,7 @@
   
   <PropertyGroup>
     <PackageId>AdaskoTheBeAsT.Puma.Security.Rules.2022</PackageId>
-    <PackageVersion>2.3.1.200</PackageVersion>
+    <PackageVersion>2.3.1.250</PackageVersion>
     <Authors>Puma Security LLC</Authors>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/pumasecurity/puma-scan/wiki</PackageProjectUrl>
@@ -21,7 +21,7 @@
     <PackageTags>Puma Scan, Code Analyzer, Application Security, Software Security, Puma Scan Community, .NET Security, Code Scan, OWASP, SANS, Security</PackageTags>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <Version>2.3.1.200</Version>
+    <Version>2.3.1.250</Version>
     <Company>Puma Security LLC</Company>
     <Product>Puma Scan Community Edition</Product>
     <AssemblyName>Puma.Security.Rules</AssemblyName>
@@ -30,8 +30,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis" Version="5.6.0" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.Web.Xdt" Version="3.2.10" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="5.9.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Web.Xdt" Version="3.2.11" PrivateAssets="all" />
   </ItemGroup>
   
   <ItemGroup>
@@ -47,7 +47,7 @@
     <None Update="tools\*.*" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
     <None Update="tools\parser\*.*" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
     <None Include="$(OutputPath)\tools\parser\*.*" Pack="true" PackagePath="tools/parser" />
-    <None Include="$(OutputPath)\..\..\..\..\packages\Microsoft.Web.Xdt.3.2.10\lib\netstandard2.0\Microsoft.Web.XmlTransform.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <None Include="$(OutputPath)\..\..\..\..\packages\Microsoft.Web.Xdt.3.2.11\lib\netstandard2.0\Microsoft.Web.XmlTransform.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     <None Include="..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\LICENSE" Pack="true" PackagePath="" />
